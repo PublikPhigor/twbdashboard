@@ -39,6 +39,9 @@ body {
 .text-white {
     color: #fff;
 }
+.text-green {
+    color: #05A248;
+}
 
 .bg-brand {
     background: #43425D;
@@ -48,6 +51,15 @@ body {
 }
 .bg-g-1 {
     background: #F0F0F7;
+}
+.bg-g-2 {
+    background: #E0DFF8;
+}
+.bg-o-1 {
+    background: #FDEBC3;
+}
+.bg-green {
+    background: #05A248;
 }
 
 .hover-green {
@@ -99,6 +111,10 @@ a {
 }
 .btn-b {
     border: 1px solid #000;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 
@@ -199,6 +215,7 @@ DASHBOARD START
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    overflow-y: scroll;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -262,6 +279,7 @@ DASHBOARD START
         width: 80%;
         height: 100%;
         margin: 0;
+        position: relative;
     }
     .submain {
         width: 90%;
@@ -278,3 +296,186 @@ DASHBOARD START
                 height: 50px;
                 border-radius: 50%;
             }
+            
+            /* cards */
+            .c-card {
+                min-height: 350px;
+                max-height: 350px;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+                .cc-img {
+                    width: 100%;
+                    height: 50%;
+                    overflow: hidden;
+                }
+                    .cc-img img {
+                        width: 100%;
+                        height: 100%;
+                        transition: .5s;
+                    }
+                        .cc-img img:hover {
+                            transform: scale(1.1);
+                            transition: .5s;
+                        }
+                .cc-content {
+                    margin: 0;
+                    background: #fff;
+                    height: 158px;
+                    overflow: hidden;
+                    position: relative;
+                }
+                    .cc-content a {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+            .m-card {
+                padding: 20px;
+                border-radius: 20px;
+                height: 200px;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+            .cover {
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: #f0f0f7a6;
+                width: 100%;
+                height: 100%;
+                z-index: 98;
+                cursor: pointer;
+            }
+            .c-modal {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+                height: 500px;
+                z-index: 99;
+                box-shadow: 5px 5px 5px #888;
+            }
+                .pb-btn {
+                    height: 20px;
+                    width: 20px;
+                    background: #fff;
+                    color: #000;
+                    border-radius: 5px;
+                    position: absolute;
+                    top: 80px;
+                    left: 10px;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                .end-btns {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 80%;
+                }
+                .cm-header {
+                    height: 50px;
+                    box-sizing: border-box;
+                }
+                .cm-body {
+                    height: 450px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                }
+                    .scm {
+                        width: 80%;
+                        box-sizing: border-box;
+                        overflow: hidden;
+                        margin: auto;
+                        padding: 20px 0;
+                    }
+                    .p-bar {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                        .pb-0 {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                            .pb-0 > span {
+                                font-size: .7rem !important;
+                            }
+                                .pb-0 span.active {
+                                    color: #05A248;
+                                }
+                        .p-circle {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            border: 1px solid #ccc;
+                            box-sizing: border-box;
+                            text-align: center;
+                            padding: 0;
+                            margin: 0;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                            .p-circle.active {
+                                border: 1px solid #05A248;
+                            }
+                                .p-circle.active span {
+                                    color: #05A248 !important;                                    
+                                }
+                            .p-circle span {
+                                line-height: 50px;
+                                font-size: 1.5rem;
+                                margin: 0;
+                                padding: 0;
+                            }
+                                .separator {
+                                    border-top: 1px solid #ccc !important;
+                                    width: 25%;
+                                }
+                                .separator.bg-green {
+                                    border-top: 1px solid #05A248 !important;
+                                }
+                    .cm-price {
+                        width: 70%;
+                        margin: 20px auto;
+                        text-align: center;
+                    }
+                        .cmpv {
+                            padding: 5px 5px;
+                            margin-bottom: 10px;
+                            border: none;
+                            outline: none;
+                            background: none;
+                            border-bottom: 2px solid #43425D;
+                            width: 100%;
+                            display: block;
+                            font-size: 2rem;
+                        }
+                            .cmpv::placeholder {
+                                font-size: 2rem;
+                            }
+                        .payment-form {
+                            margin: 10px auto;
+                            width: 100%;
+                        }
+                            .payment-form input {
+                                background: none;
+                                border: none;
+                                padding: 10px 5px;
+                                margin-bottom: 5px;
+                                border-bottom: 2px solid #43425D;
+                                width: 80%;
+                                box-sizing: border-box;
+                            }
+                                .payment-form input::placeholder {
+                                    font-size: .9rem;
+                                    font-weight: 500;
+                                }
+                                .pf-split input {
+                                    width: 48%;
+                                }
+           
